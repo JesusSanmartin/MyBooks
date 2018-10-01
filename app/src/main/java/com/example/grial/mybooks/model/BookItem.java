@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class BookItem {
 
-    public final String id;
+    public final int id;
 
     public final String titulo;
 
@@ -17,7 +17,7 @@ public class BookItem {
 
     public final String urlMiniatura;
 
-    public BookItem(String id, String titulo, String autor,
+    public BookItem(int id, String titulo, String autor,
                     Date fecha, String descripcion, String urlMiniatura) {
         this.id = id;
         this.titulo = titulo;
