@@ -1,6 +1,7 @@
 package com.example.grial.mybooks.dummy;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public class DummyContent {
      */
     public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
-    private static final int COUNT = 25;
+    private static final int COUNT = 2;
 
     static {
         // Add some sample items.
@@ -55,13 +56,20 @@ public class DummyContent {
      */
     public static class DummyItem {
         public final String id;
-        public final String content;
-        public final String details;
+        public final String titulo;
+        public final String autor;
+        public final Date fecha;
+        public final String descripcion;
+        public final String urlMiniatura;
 
-        public DummyItem(String id, String content, String details) {
+        public DummyItem(String id, String titulo, String autor,
+                        Date fecha, String descripcion, String urlMiniatura) {
             this.id = id;
-            this.content = content;
-            this.details = details;
+            this.titulo = titulo;
+            this.autor = autor;
+            this.fecha = fecha;
+            this.descripcion= descripcion;
+            this.urlMiniatura = urlMiniatura;
         }
 
         @Override
