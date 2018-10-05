@@ -20,13 +20,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BookDetailActivity"
-            android:label="@string/title_book_detail"
-            android:parentActivityName=".BookListActivity"
+            android:name=".BookItemDetailActivity"
+            android:label="@string/title_bookitem_detail"
+            android:parentActivityName=".BookItemListActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.grial.mybooks.BookListActivity" />
+                android:value="com.example.grial.mybooks.BookItemListActivity" />
         </activity>
     </application>
 

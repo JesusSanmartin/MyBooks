@@ -2,4 +2,5 @@
     <string name="app_name">MyBooks</string>
     <string name="title_book_list">Books</string>
     <string name="title_book_detail">Book Detail</string>
+    <string name="title_bookitem_detail">BookItem Detail</string>
 </resources>

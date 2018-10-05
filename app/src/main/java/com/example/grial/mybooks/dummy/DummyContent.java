@@ -1,10 +1,13 @@
 package com.example.grial.mybooks.dummy;
 
+import com.example.grial.mybooks.model.BookItem;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -17,14 +20,14 @@ public class DummyContent {
     /**
      * An array of sample (dummy) items.
      */
-    public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+    public static final List<BookItem> ITEMS = new ArrayList<BookItem>();
 
     /**
      * A map of sample (dummy) items, by ID.
      */
-    public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
+    public static final Map<Integer, BookItem> ITEM_MAP = new HashMap<Integer, BookItem>();
 
-    private static final int COUNT = 2;
+    private static final int COUNT = 25;
 
     static {
         // Add some sample items.
@@ -35,46 +38,12 @@ public class DummyContent {
 
     private static void addItem(DummyItem item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        ITEM_MAP.put(item.getId(), item);
     }
 
     private static DummyItem createDummyItem(int position) {
-        return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
+        return new BookItem(position, "Title "+position, "Author "+position, new Date(), "Description " + position+"\nSecond line", "");
     }
 
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Details about Item: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
-        return builder.toString();
-    }
 
-    /**
-     * A dummy item representing a piece of content.
-     */
-    public static class DummyItem {
-        public final String id;
-        public final String titulo;
-        public final String autor;
-        public final Date fecha;
-        public final String descripcion;
-        public final String urlMiniatura;
-
-        public DummyItem(String id, String titulo, String autor,
-                        Date fecha, String descripcion, String urlMiniatura) {
-            this.id = id;
-            this.titulo = titulo;
-            this.autor = autor;
-            this.fecha = fecha;
-            this.descripcion= descripcion;
-            this.urlMiniatura = urlMiniatura;
-        }
-
-        @Override
-        public String toString() {
-            return content;
-        }
-    }
 }
